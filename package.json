@@ -1,31 +1,53 @@
 {
-  "name": "corner4",
+  "name": "autogen-js-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel start:**",
-    "start:server": "cd server && nodemon server",
-    "start:client": "cd client && npm start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "for f in $(find . -type f -name '*.js'); do echo \"[TEST] $f\"; node $f || exit 1; done"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/koh0074/corner4.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/koh0074/corner4/issues"
-  },
-  "homepage": "https://github.com/koh0074/corner4#readme",
   "dependencies": {
-    "axios": "^1.7.9",
-    "express": "^4.21.2"
-  },
-  "devDependencies": {
-    "http-proxy-middleware": "^3.0.3",
-    "nodemon": "^3.1.9",
-    "npm-run-all": "^4.1.5"
+    "@testing-library/jest-dom": "*",
+    "@testing-library/react": "*",
+    "axios": "*",
+    "babel-cli": "*",
+    "bcrypt": "*",
+    "body-parser": "*",
+    "chai": "*",
+    "cookie-parser": "*",
+    "cors": "*",
+    "dotenv": "*",
+    "ejs": "*",
+    "eslint": "*",
+    "express": "*",
+    "express-session": "*",
+    "hapi": "*",
+    "http-proxy-middleware": "*",
+    "jest": "*",
+    "jsonwebtoken": "*",
+    "koa": "*",
+    "lodash": "*",
+    "mocha": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "multer": "*",
+    "mysql2": "*",
+    "nodemon": "*",
+    "nunjucks": "*",
+    "passport": "*",
+    "passport-local": "*",
+    "pg": "*",
+    "prettier": "*",
+    "pug": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-router-dom": "*",
+    "redis": "*",
+    "sequelize": "*",
+    "sqlite3": "*",
+    "supertest": "*",
+    "ts-node": "*",
+    "typescript": "*"
   }
 }
